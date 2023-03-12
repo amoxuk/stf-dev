@@ -114,7 +114,7 @@
     "fs-extra": "^8.1.0",
     "gulp": "^4.0.2",
     "gulp-angular-gettext": "^2.1.0",
-    "gulp-eslint": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
     "gulp-jsonlint": "^1.0.2",
     "gulp-protractor": "^3.0.0",
     "gulp-pug": "^4.0.1",
