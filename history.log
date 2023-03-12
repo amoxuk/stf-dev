@@ -1,0 +1,318 @@
+    1  npm config set registry http://mirrors.cloud.tencent.com/npm/
+    2  ls
+    3  ll
+    4  cat Dockerfile
+    5  export DEBIAN_FRONTEND=noninteractive &&     useradd --system       --create-home       --shell /usr/sbin/nologin       stf-build &&     useradd --system       --create-home       --shell /usr/sbin/nologin       stf &&     sed -i'' 's@http://archive.ubuntu.com/ubuntu/@mirror://mirrors.ubuntu.com/mirrors.txt@' /etc/apt/sources.list &&     apt-get update &&     apt-get -y install wget python3 build-essential &&     cd /tmp &&     wget --progress=dot:mega       https://nodejs.org/dist/v17.9.0/node-v17.9.0-linux-x64.tar.xz &&     tar -xJf node-v*.tar.xz --strip-components 1 -C /usr/local &&     rm node-v*.tar.xz &&     su stf-build -s /bin/bash -c '/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js install' &&     apt-get -y install libzmq3-dev libprotobuf-dev git graphicsmagick openjdk-8-jdk yasm cmake &&     apt-get clean &&     rm -rf /var/cache/apt/* /var/lib/apt/lists/* &&     mkdir /tmp/bundletool &&     cd /tmp/bundletool &&     wget --progress=dot:mega       https://github.com/google/bundletool/releases/download/1.2.0/bundletool-all-1.2.0.jar &&     mv bundletool-all-1.2.0.jar bundletool.jar
+    6  ls
+    7  cp /mnt/f/nodejs/stf/ /app
+    8  cp /mnt/f/nodejs/stf/ /app -r
+    9  mkdir -p /app &&     chown -R stf-build:stf-build /tmp/build /tmp/bundletool /app
+   10  cp /mnt/f/nodejs/stf/ /tmp/build -r
+   11  mkdir -p /app &&     chown -R stf-build:stf-build /tmp/build /tmp/bundletool /app
+   12  su stf-build
+   13  su - stf-build
+   14  sudo su stf-build
+   15  sudo stf-build
+   16  su stf-build
+   17  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   18  npm config set registry http://mirrors.cloud.tencent.com/npm/
+   19  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   20  git config --global url."https://".insteadOf git://
+   21  git config --global url."https://".insteadOf "ssh://git@"
+   22  git config --global --list
+   23  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   24  ls
+   25  cp  /mnt/c/Users/amoxuk/.ssh ~/
+   26  cp  /mnt/c/Users/amoxuk/.ssh ~/ -r
+   27  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   28  git --no-replace-objects ls-remote ssh://git@github.com/fintechx/swagger-node-runner.git
+   29  ping github.com
+   30  cd /etc/
+   31  ls
+   32  cat host
+   33  cat hosts
+   34  curl https://raw.hellogithub.com/hosts
+   35  ping 140.82.113.3
+   36  curl https://raw.hellogithub.com/hosts >> hosts
+   37  vi host
+   38  vi hosts
+   39  git --no-replace-objects ls-remote ssh://git@github.com/fintechx/swagger-node-runner.git
+   40  curl https://github.com/jianboy/github-host/blob/7ced38bb0e8d3eef0d5af72ce6f65812763189df/hosts >> hosts
+   41  vi hosts
+   42  curl https://ghproxy.net/https://raw.githubusercontent.com/jianboy/github-host/master/hosts >> hosts
+   43  cat hosts
+   44  vi hosts
+   45  git --no-replace-objects ls-remote ssh://git@github.com/fintechx/swagger-node-runner.git
+   46  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   47  git --no-replace-objects ls-remote ssh://git@github.com/fintechx/swagger-node-runner.git
+   48  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   49  ssh -T git@github.com
+   50  chmod +x /root/.ssh/id_ed25519
+   51  ssh -T git@github.com
+   52  chmod +r /root/.ssh/id_ed25519
+   53  ssh -T git@github.com
+   54  chmod 0711 /root/.ssh/id_ed25519
+   55  ssh -T git@github.com
+   56  chmod 0511 /root/.ssh/id_ed25519
+   57  ssh -T git@github.com
+   58  chmod 0200 /root/.ssh/id_ed25519
+   59  ssh -T git@github.com
+   60  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   61  ssh -T git@github.com
+   62  ssh-keygen -t ed25519 -C "your_email@example.com"
+   63  ssh-keygen -t ed25519 -C "amoxuk@aliyun.com"
+   64  cat /root/.ssh/id_ed25519.pub/root/.ssh/id_ed25519.pub/root/.ssh/id_ed25519.pub
+   65  cat /root/.ssh/id_ed25519.pub
+   66  ssh -T git@github.com
+   67  ls /root/.ssh/
+   68  ls /root/.ssh/ -al 
+   69  cat /root/.ssh/config 
+   70  cat /root/.ssh/known_hosts.old 
+   71  rm ~/.ssh/config 
+   72  rm ~/.ssh/known_hosts
+   73  rm ~/.ssh/known_hosts.old 
+   74  cat /root/.ssh/known_hosts.old 
+   75  ls -al  ~/.ssh/
+   76  ssh -T git@github.com
+   77  ssh-add id_rsa 
+   78  ssh -T git@github.com
+   79  ssh-add id_rsa 
+   80  ssh-add /root/.ssh/id_ed25519
+   81  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   82  tail -f /root/.npm/_logs/2023-03-12T07_01_31_030Z-debug-0.log -n 50
+   83  ssh-keygen -t rsa -b 4096 -C "amoxuk@aliyun.com"
+   84  cat /root/.ssh/id_rsa.pub
+   85  ssh -T git@github.com
+   86  rm /root/.ssh/id_ed25519*
+   87  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   88  git config --global url."https://".insteadOf ssh://git
+   89  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   90  npm cache clean --force
+   91  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   92  git config --global url."https://".insteadOf ssh://git@
+   93  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+   94  npm  install 
+   95  yarn 
+   96  yarn
+   97  npm -install -g yarn 
+   98  npm install -g yarn 
+   99  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  100  yarn 
+  101  sudo bower install && not-in-install && gulp build || in-install
+  102  yarn 
+  103  git config --global -e
+  104  export
+  105  apt-get remove nano
+  106  git config --global -e
+  107  yarn 
+  108  git config --global -e
+  109  yarn 
+  110  git config --global -e
+  111  rm yarn.lock 
+  112  git config --global -e
+  113  yarn 
+  114  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  115  vi /root/.config/configstore/bower-github.json
+  116  ls /root/.config/configstore/bower-github.json
+  117  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  118  ls /root/.config/configstore/bower-github.json -al 
+  119  chmod 777 /root/.config/configstore/bower-github.json -al 
+  120  chmod 777 /root/.config/configstore/bower-github.json 
+  121  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  122  ls -al /root/.config/configstore/bower-github.json
+  123  sh -c bower install && not-in-install && gulp build || in-install
+  124  npm pack
+  125  sudo chown -R $USER:$GROUP ~/.npm
+  126  sudo chown -R $USER:$GROUP ~/.config
+  127  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  128  ls /root/.config/
+  129  ls /root/.config/ -al 
+  130  chmod 777 -hR /root/.config/
+  131  chmod 777 -hR /root/.config
+  132  chmod -hR 777  /root/.config
+  133  chmod -R 777  /root/.config
+  134  ls /root/.config/ -al 
+  135  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  136* vi /tmp/build/node_modules/bower/lib/node_modules/configstore/index.j
+  137  ls /root/.config/ -al 
+  138  ls /root/.config/configstore/ -al 
+  139  sudo bower update -a
+  140  sudo npm
+  141  sudo npm install bower -g
+  142  sudo bower update -a
+  143  sudo set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&     npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  144  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&    sudo  npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  145  sudo sh -v  bower install && not-in-install && gulp build || in-install
+  146  sudo sh -c  bower install && not-in-install && gulp build || in-install
+  147  sudo   bower install && not-in-install && gulp build || in-install
+  148  telnet 127.0.0.1 7890
+  149  ifconfig 
+  150  ipconfig 
+  151  apt install net-tools
+  152  apt install ifconfig 
+  153  ip addr
+  154  ping 172.23.102.1
+  155  ping 172.23.11.1
+  156  ping 172.23.111.1
+  157  cat /etc/resolv.conf
+  158  ping 172.23.96.1
+  159  telnet 172.23.96.1 8000
+  160  curl http://172.23.96.1:8000
+  161  telnet 172.23.96.1 8000
+  162  cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
+  163  ping 172.23.96.1\
+  164  curl http://172.23.96.1:8000
+  165  curl http://172.23.96.1:8000/
+  166  telnet 172.23.96.1 7890
+  167  curl http://172.23.96.1:8000/.babel.json
+  168  curl http://172.23.96.1:8080/.babel.json
+  169  export http_proxy=http://172.23.96.1:7890
+  170  export http_proxy=https://172.23.96.1:7890
+  171  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&    sudo  npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  172  bower install && not-in-install && gulp build || in-install
+  173  telnet 172.23.96.1 7890
+  174  ping 172.23.96.1
+  175  telnet 172.23.96.1 7890
+  176  bower install && not-in-install && gulp build || in-install
+  177  git config --global http.sslVerify false
+  178  bower install && not-in-install && gulp build || in-install
+  179  git config --global -e 
+  180  bower install && not-in-install && gulp build || in-install
+  181  git config --global -e 
+  182  bower install && not-in-install && gulp build || in-install
+  183  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  184  bower install && not-in-install && gulp build || in-install
+  185  bower
+  186  bower --alow-root
+  187* 
+  188  git config --global https.sslVerify false
+  189  git config --global -e
+  190  git config --global git.sslVerify false
+  191  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  192  telnet 172.23.96.1 7890
+  193  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  194  export all_proxy=https://172.23.96.1:7890
+  195  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  196  git config --global -e
+  197  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  198  sudo apt-get update
+  199  apt install build-essential fakeroot dpkg-dev
+  200  apt build-dep git
+  201  apt install build-essential fakeroot dpkg-dev
+  202  apt-get build-dep git
+  203  vi /etc/apt/sources.list
+  204  apt install build-essential fakeroot dpkg-dev
+  205  apt-get build-dep git
+  206  apt update
+  207  vi /etc/apt/sources.list
+  208  apt update
+  209  vi /etc/apt/sources.list
+  210  apt update
+  211  vi /etc/apt/sources.list
+  212  ls /etc/apt/sources.list.d/
+  213  apt update
+  214  vi /etc/apt/sources.list
+  215  apt update
+  216  export all_proxy=https://172.23.96.1:7890 unset
+  217  apt update
+  218  unset https_proxy
+  219  unset all_proxy
+  220  apt update
+  221  unset http_proxy
+  222  apt update
+  223  sudo apt-get update
+  224  sudo apt-get install build-essential fakeroot dpkg-dev
+  225  sudo apt-get build-dep git
+  226  apt-get build-dep git
+  227  mkdir ~/git-openssl
+  228  cd ~/git-openssl
+  229  apt-get source git
+  230  ls
+  231  cd git-2.25.1/
+  232  ls
+  233  cd ..
+  234  ls
+  235  dpkg-source -x git_2.25.1-1ubuntu3.10.dsc 
+  236  sudo add-apt-repository ppa:git-core/ppa
+  237  apt install git
+  238  export all_proxy=https://172.23.96.1:7890 
+  239  cd /tmp/build/
+  240  bower update --allow-root
+  241  git config --global
+  242  git config --global -e
+  243  bower update --allow-root
+  244  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  245  git config --global http.https://github.com.proxy http://127.0.0.1:7890
+  246  git config --global https.https://github.com.proxy http://127.0.0.1:7890
+  247  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  248  git config --global --unset http.https://github.com.proxy
+  249  git config --global --unset https.https://github.com.proxy
+  250  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  251  git config --global http.https://github.com.proxy http://172.23.96.1:7890
+  252  git config --global https.https://github.com.proxy http://172.23.96.1:7890
+  253  git ls-remote --tags --heads https://github.com/JanStevens/angular-growl-2.git
+  254  bower update --allow-root
+  255  yarn 
+  256  history 
+  257  set -x &&     cd /tmp/build &&     export PATH=$PWD/node_modules/.bin:$PATH &&     npm install --python="/usr/bin/python3"  --loglevel http &&    sudo  npm pack &&     tar xzf devicefarmer-stf-*.tgz --strip-components 1 -C /app &&     bower cache clean &&     npm prune --production &&     mv node_modules /app &&     rm -rf ~/.node-gyp &&     mkdir /app/bundletool &&     mv /tmp/bundletool/* /app/bundletool &&     cd /app &&     find /tmp -mindepth 1 ! -regex '^/tmp/hsperfdata_root\(/.*\)?' -delete
+  258  bower install && not-in-install && gulp build || in-install
+  259  ls /app/
+  260  ll
+  261  ls node_modules/
+  262  gulp clean 
+  263  gulp webpack:build
+  264  ls
+  265  ll
+  266  cd ..
+  267  ls
+  268  mv build /root/ -r
+  269  mv build /root/
+  270  cd /root/
+  271  ls
+  272  ll
+  273  cd build/
+  274  ls
+  275  cd ..
+  276  git log
+  277  ls
+  278  cd build/
+  279  ls
+  280  ll
+  281  git init 
+  282  git remote add origin git@github.com:amoxuk/stf-dev.git
+  283  git branch -M main
+  284  git push -u origin main
+  285  git config --global --add safe.directory /root/build
+  286  git remote add origin git@github.com:amoxuk/stf-dev.git
+  287  git branch -M main
+  288  git push -u origin main
+  289  ls
+  290  git remote add origin git@github.com:amoxuk/stf-dev.git
+  291  git branch -M main
+  292  git push -u origin main
+  293  git config --global -e
+  294  git push -u origin main
+  295  git remote add origin git@github.com:amoxuk/stf-dev.git
+  296  git config -e
+  297  git push -u origin main
+  298  ls
+  299  rm .gitignore 
+  300  git add *
+  301  git push -u origin main
+  302  git commit -m 'all'
+  303  git push -u origin main
+  304  tar
+  305  tar --usage
+  306  tar --help 
+  307  tar -zcf stf-dev build
+  308  tar -zcf stf-dev.tar.gz build
+  309  ll
+  310  ls -alh
+  311  cd stf-dev
+  312  pwd
+  313  mv stf-dev.tar.gz /mnt/f/nodejs/stf/
+  314  cd /mnt/f/nodejs/stf/
+  315  ls
+  316  cd ~/build/
+  317  ls
+  318  history > history.log
